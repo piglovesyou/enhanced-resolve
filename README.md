@@ -14,14 +14,14 @@ and try
 import MultiAliasPlugin from '@piglovesyou/enhanced-resolve/lib/AliasPlugin';
 
 const config = {
-	resolve: {
-		
+  resolve: {
+    
     plugins: [new MultiAliasPlugin('described-resolve', {
       name: '@multi@',
       alias: [ './first', './second', ], // <- What this package supports
     }, 'resolve')],
-		
-	}
+    
+  }
 };
 ```
 
