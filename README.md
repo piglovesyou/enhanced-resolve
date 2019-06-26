@@ -1,3 +1,32 @@
+# @piglovesyou/enhanced-resolve
+
+This is a temporary project until [multiple aliases are supported](https://github.com/webpack/webpack/issues/6817).
+
+Usage:
+
+```
+npm install @piglovesyou/enhanced-resolve
+```
+
+and try
+
+```js
+import MultiAliasPlugin from '@piglovesyou/enhanced-resolve/lib/AliasPlugin';
+
+const config = {
+	resolve: {
+		
+    plugins: [new MultiAliasPlugin('described-resolve', {
+      name: '@multi@',
+      alias: [ './first', './second', ], // <- What this package supports
+    }, 'resolve')],
+		
+	}
+};
+```
+
+I'll archive this repository when webpack officially supports it.
+
 # enhanced-resolve
 
 Offers an async require.resolve function. It's highly configurable.
